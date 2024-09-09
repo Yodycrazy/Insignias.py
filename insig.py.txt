@@ -1,0 +1,10 @@
+salario, numero_he, bonificacion = input().split()
+salario = float(salario)
+numero_he = int(numero_he)
+bonificacion = int(bonificacion)
+valor_hora_laboral = salario / 192
+valor_hora_extra = valor_hora_laboral * 1.25
+valor_bonificacion = salario * 0.05
+salario_total = salario + (valor_hora_extra*numero_he) + (bonificacion*valor_bonificacion)
+salario_neto = salario_total - ((salario_total*0.04)+(salario_total*0.035)+(salario_total*0.01))
+print(round(salario_neto, 1))
